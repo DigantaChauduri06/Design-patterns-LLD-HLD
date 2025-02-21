@@ -16,6 +16,13 @@ class FourWheeler extends Vehicle {
   }
 }
 
+// PRODUCT
+class EightWheeler extends Vehicle {
+  public printVehicle(): void {
+      console.log("I AM A 8 WHEELER");  
+  }
+}
+
 // using factory method pattern
 // CREATOR
 interface IvehicleCreator {
@@ -33,6 +40,12 @@ class FourWheelerFactory implements IvehicleCreator {
       return new FourWheeler();
     } 
 }
+
+class EightWheelerFactory implements IvehicleCreator {
+    createVehicle(): Vehicle {
+      return new EightWheeler();
+    } 
+}
 // So if we want to create 8 wheeler then just need to create this class  
 
 class Client {
@@ -46,9 +59,9 @@ class Client {
 }
 
 // How do I use this?
-const client = new Client(new TwoWheelerFactory());
-const twoWheelerVehicle = client.getVehicle;
-twoWheelerVehicle.printVehicle()
+const client = new Client(new EightWheelerFactory());
+const eightWheelerVehicle = client.getVehicle;
+eightWheelerVehicle .printVehicle()
 
 /*
 // Client - without Factory method
