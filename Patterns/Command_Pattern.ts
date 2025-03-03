@@ -19,7 +19,7 @@ class Fan {
   }
   public off() {
     console.log("Fan is OFF");
-  }
+  } 
 }
 
 // Command for Light ON
